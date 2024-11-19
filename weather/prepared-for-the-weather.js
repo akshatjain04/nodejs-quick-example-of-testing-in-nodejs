@@ -21,7 +21,8 @@
  * @returns {*}
  */
 function averageTemp(min, max) {
-  if (!isNaN(min) && !isNaN(max)) {
+  if ((!isNaN(min) && !isNaN(max)) ||
+    (typeof min === "number") && (typeof max === "number")) {
     return (min + max) / 2;
   } else {
     return NaN;
